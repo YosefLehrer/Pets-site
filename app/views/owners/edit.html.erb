@@ -1,0 +1,13 @@
+<h1>Edit <%=@owner.first_name%> <%=@owner.last_name%></h1>
+
+<%=form_for @owner do |f| %>
+<%= f.label :first_name%>
+<%= f.text_field :first_name %><br>
+<%= f.label :last_name%>
+<%= f.text_field :last_name %><br>
+<%= f.label :age%>
+<%= f.number_field :age%><br>
+<%= f.label :email%>
+<%= f.email_field :email %><br>
+<%= f.submit %>
+<% end %>

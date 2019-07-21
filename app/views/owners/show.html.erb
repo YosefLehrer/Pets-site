@@ -1,0 +1,13 @@
+<h1>Hello <%=@owner.first_name%></h1>
+<!-- <p><%=@owner.first_name%> <%=@owner.last_name%></p> -->
+<p>You are <%=@owner.age%> years old</p>
+<p>Your email address is: <%=@owner.email%></p>
+<ol>
+    <th>Your Pets are:</th>
+    <%@owner.pets.each do |pet|%>
+    <li><%=link_to "#{pet.name}", pet_path(pet)%></li>
+    <%end%>
+</ol>
+<%= button_to "Edit your account", edit_owner_path, method: :get%>
+<%= button_to "Delete your account", "/owners/#{@owner.id}/delete", method: :delete%>
+<%= button_to "Return to Owners page", owners_path, method: "get" %>

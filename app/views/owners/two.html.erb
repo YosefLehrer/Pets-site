@@ -1,0 +1,5 @@
+<%@owners.each do |owner|%>
+    <ul><%=owner%></ul>
+<%end%>
+
+<%= button_to "Return to Owners page", owners_path, method: "get" %>

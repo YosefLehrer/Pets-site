@@ -1,0 +1,10 @@
+<h1>All Pets</h1>
+<p>Find me in app/views/pets/index.html.erb</p>
+
+<%@pets.each do |pet|%>
+<li><%=link_to "#{pet.name}",  pet_path(pet) %></li>
+<%end%>
+<br>
+<%= button_to "Add a Pet", new_pet_path, method: :get%>
+<br>
+<%= button_to "Home Page", home_path, method: :get%>
